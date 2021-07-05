@@ -16,6 +16,8 @@ namespace FlappyBird
         int gravity = 5;
         int score = 0;
         bool start = false;
+        int TogMove;
+        int MValX, MValY;
         Random random = new Random();
         public Form1()
         {
@@ -40,6 +42,9 @@ namespace FlappyBird
         }
         private void restart()
         {
+             pipeSpeed = 6;
+             gravity = 5;
+             score = 0;
             start = false;
             // this.Close();
             this.Controls.Clear();
@@ -108,10 +113,17 @@ namespace FlappyBird
         private void endGame()
         {
             timer.Stop();
-            MessageBox.Show("Game Over");
+            MessageBox.Show("Game Over" + Environment.NewLine + "Score :"+score.ToString());
             restart();
             
             
         }
+
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+     
     }
 }

@@ -38,6 +38,7 @@ namespace FlappyBird
             this.pipeDown = new System.Windows.Forms.PictureBox();
             this.pipeUp = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Exit = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ground)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flappyBird)).BeginInit();
@@ -105,11 +106,26 @@ namespace FlappyBird
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.Exit);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(259, 73);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(336, 243);
             this.panel1.TabIndex = 13;
+            // 
+            // Exit
+            // 
+            this.Exit.AutoSize = true;
+            this.Exit.BackColor = System.Drawing.Color.Transparent;
+            this.Exit.Font = new System.Drawing.Font("Snap ITC", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Exit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.Exit.Location = new System.Drawing.Point(120, 174);
+            this.Exit.Name = "Exit";
+            this.Exit.Size = new System.Drawing.Size(71, 27);
+            this.Exit.TabIndex = 1;
+            this.Exit.Text = "Exit";
+            this.Exit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
             // label1
             // 
@@ -136,7 +152,10 @@ namespace FlappyBird
             this.Controls.Add(this.flappyBird);
             this.Controls.Add(this.pipeDown);
             this.Controls.Add(this.pipeUp);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
+            this.ShowIcon = false;
             this.Text = "FlappyBird";
             this.TransparencyKey = System.Drawing.Color.Black;
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -162,6 +181,7 @@ namespace FlappyBird
         private System.Windows.Forms.PictureBox pipeUp;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label Exit;
     }
 }
 
